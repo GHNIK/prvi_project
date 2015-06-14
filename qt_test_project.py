@@ -3,9 +3,12 @@
 import os
 import sys
 
-
-from PySide import QtCore, QtGui
-from PySide.QtCore import Qt
+try:
+    from PySide import QtCore, QtGui
+    from PySide.QtCore import Qt
+except ImportError:
+    from PyQt4 import QtCore, QtGui
+    from PyQt4.QtCore import Qt
 
 
 
