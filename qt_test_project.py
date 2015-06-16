@@ -3,9 +3,12 @@
 import os
 import sys
 
+# use if use PyQt4 (linux)
+# from PyQt4 import QtCore, QtGui
+# from PyQt4.QtCore import Qt
 
-from PyQt4 import QtCore, QtGui
-from PyQt4.QtCore import Qt
+from PySide import QtCore, QtGui
+from PySide.QtCore import Qt
 
 from stylesheet import STYLESHEET
 
