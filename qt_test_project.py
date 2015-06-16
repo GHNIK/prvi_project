@@ -17,7 +17,8 @@ class App(QtGui.QWidget):
         super(App, self).__init__(parent)
         self.setWindowTitle('testApp')
         self.setStyleSheet(STYLESHEET)
-    
+	self.setMinimumWidth (400)
+	
         main_layout = QtGui.QVBoxLayout()
 
         self.button = QtGui.QPushButton('Exit')
@@ -31,29 +32,20 @@ class App(QtGui.QWidget):
 
         self.tableview = QtGui.QTableView()
         self.model = QtGui.QStandardItemModel()
-
-
         self.tableview.setModel(self.model)
 
 
         h_header = self.tableview.horizontalHeader()
-       # h_header.initializeSections(0,3)
-
-
 
         main_layout.addWidget(self.button)
         main_layout.addWidget(button2)
         main_layout.addWidget(text)
         main_layout.addWidget(self.tableview)
 
-
         self.setLayout(main_layout)
 
         timer = QtCore.QTimer()
         # timer.singleShot(500,self._exit)
-
-
-
 
     def _exit(self):
         QtGui.QApplication.quit()
@@ -68,18 +60,6 @@ class App(QtGui.QWidget):
 
         self.model.appendRow(row)
         self.model.setHeaderData(0, Qt.Horizontal,"Name")
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 if __name__ == '__main__':
