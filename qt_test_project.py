@@ -17,7 +17,7 @@ class App(QtGui.QWidget):
         super(App, self).__init__(parent)
         self.setWindowTitle('testApp')
         self.setStyleSheet(STYLESHEET)
-
+    
         main_layout = QtGui.QVBoxLayout()
 
         self.button = QtGui.QPushButton('Exit')
@@ -37,7 +37,7 @@ class App(QtGui.QWidget):
 
 
         h_header = self.tableview.horizontalHeader()
-        h_header.initializeSections(0,3)
+       # h_header.initializeSections(0,3)
 
 
 
@@ -61,7 +61,7 @@ class App(QtGui.QWidget):
     def _test(self):
         # self.button.released.emit()
         row = []
-        for i in range(5):
+        for i in range(3):
             row_item = QtGui.QStandardItem()
             row_item.setText('test item: %i' %i)
             row.append(row_item)
